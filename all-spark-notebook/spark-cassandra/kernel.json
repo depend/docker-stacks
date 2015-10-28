@@ -1,0 +1,14 @@
+{
+ "display_name": "spark_py2_cassandra",
+ "language": "python",
+ "argv": [
+  "/opt/conda/envs/python2/bin/python",
+  "-m",
+  "ipykernel",
+  "-f",
+  "{connection_file}"
+ ],
+ "env":{
+ "PYSPARK_SUBMIT_ARGS": "--master spark://10.0.2.15:7077 --packages com.datastax.spark:spark-cassandra-connector_2.10:1.5.0-M2 --conf spark.cassandra.connection.host=192.168.0.10 pyspark-shell"
+ }
+}

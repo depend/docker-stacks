@@ -106,3 +106,6 @@ RUN $CONDA_DIR/envs/python2/bin/python \
     $CONDA_DIR/envs/python2/bin/ipython \
     kernelspec install-self
 
+# Spark with Cassandra Connector spec
+RUN mkdir -p /opt/conda/share/jupyter/kernels/pyspark_data
+COPY spark-cassandra/kernel.json /opt/conda/share/jupyter/kernels/pyspark_data/
